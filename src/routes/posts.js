@@ -11,6 +11,6 @@ import {
 router.post("/create", upload.single("photo"), create);
 router.get("/", findAll);
 router.get("/:id", findOne);
-router.put("/:id", updatep);
+router.put("/:id", upload.single("photo"), updatep);
 router.delete("/:id", deletep);
 export default router;
