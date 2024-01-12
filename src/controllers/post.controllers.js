@@ -75,6 +75,7 @@ export const create = async (req, res) => {
 export const updatep = async (req, res) => {
   try {
     const postId = req.params.id;
+
     const result = await cloudinary.uploader.upload(req.body.photo);
 
     const updatedPost = await Post.findByIdAndUpdate(
